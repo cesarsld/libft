@@ -3,98 +3,94 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cjaimes <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 14:55:10 by cjaimes           #+#    #+#              #
-#    Updated: 2019/06/19 15:23:44 by cjaimes          ###   ########.fr        #
+#    Updated: 2019/10/10 17:58:19 by cjaimes          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-ROOT	=	./srcs/
+ROOT	=	./
 
-HROOT	=	includes
+HROOT	=	./
 
-FILES	=	ft_putchar.c
-FILES	+=	ft_putstr.c
-FILES	+=	ft_putendl.c
-FILES	+=	ft_putnbr.c
-FILES	+=	ft_putchar_fd.c
-FILES	+=	ft_putstr_fd.c
-FILES	+=	ft_putendl_fd.c
-FILES	+=	ft_putnbr_fd.c
+FILES	=	ft_memset.c \
+			ft_bzero.c \
+			ft_memcpy.c \
+			ft_memccpy.c \
+			ft_memmove.c \
+			ft_memchr.c \
+			ft_memcmp.c \
+			ft_strlen.c \
+			ft_strlcpy.c \
+			ft_strlcat.c \
+			ft_strchr.c \
+			ft_strrchr.c \
+			ft_strnstr.c \
+			ft_strncmp.c \
+			ft_atoi.c \
+			ft_isalpha.c \
+			ft_isdigit.c \
+			ft_isalnum.c \
+			ft_isascii.c \
+			ft_isprint.c \
+			ft_toupper.c \
+			ft_tolower.c \
+			ft_calloc.c \
+			ft_strdup.c \
+			ft_substr.c \
+			ft_strjoin.c \
+			ft_strtrim.c \
+			ft_split.c \
+			ft_itoa.c \
+			ft_strmapi.c \
+			ft_putchar_fd.c \
+			ft_putstr_fd.c \
+			ft_putendl_fd.c \
+			ft_putnbr_fd.c \
 
-FILES	+=	ft_strcmp.c
-FILES	+=	ft_strncmp.c
-
-FILES	+=	ft_strcpy.c
-FILES	+=	ft_strncpy.c
-
-FILES	+=	ft_strcat.c
-FILES	+=	ft_strncat.c
-FILES	+=	ft_strlcat.c
-
-FILES	+=	ft_strstr.c
-FILES	+=	ft_strnstr.c
-
-FILES	+=	ft_strchr.c
-FILES	+=	ft_strrchr.c
-
-FILES	+=	ft_strdup.c
-FILES	+=	ft_strnew.c
-FILES	+=	ft_strdel.c
-FILES	+=	ft_strclr.c
-FILES	+=	ft_striter.c
-FILES	+=	ft_striteri.c
-FILES	+=	ft_strmap.c
-FILES	+=	ft_strmapi.c
-FILES	+=	ft_strequ.c
-FILES	+=	ft_strnequ.c
-FILES	+=	ft_strsub.c
-FILES	+=	ft_strjoin.c
-FILES	+=	ft_strtrim.c
-FILES	+=	ft_strsplit.c
-
-
-
-FILES	+=	ft_strlen.c
-
-FILES	+=	ft_swap.c
-FILES	+=	ft_atoi.c
-FILES	+=	ft_itoa.c
-
-FILES	+=	ft_isascii.c
-FILES	+=	ft_isprint.c
-FILES	+=	ft_isupper.c
-FILES	+=	ft_islower.c
-FILES	+=	ft_toupper.c
-FILES	+=	ft_tolower.c
-FILES	+=	ft_isdigit.c
-FILES	+=	ft_isalpha.c
-FILES	+=	ft_isalnum.c
-
-FILES	+=	ft_memset.c
-FILES	+=	ft_bzero.c
-FILES	+=	ft_memcpy.c
-FILES	+=	ft_memccpy.c
-FILES	+=	ft_memmove.c
-FILES	+=	ft_memchr.c
-FILES	+=	ft_memcmp.c
-
-FILES	+=	ft_memalloc.c
-FILES	+=	ft_memdel.c
-
-FILES	+=	ft_strndup.c
-
-FILES	+=	ft_lstnew.c
-FILES	+=	ft_lstdelone.c
-FILES	+=	ft_lstdel.c
-FILES	+=	ft_lstadd.c
-FILES	+=	ft_lstiter.c
-FILES	+=	ft_lstmap.c
+BONUS	=	ft_lstnew_bonus.c \
+			ft_lstdelone_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstadd_front_bonus.c \
+			ft_lstadd_back_bonus.c \
+			ft_lstiter_bonus.c \
+			ft_lstmap_bonus.c \
+			ft_lstsize_bonus.c \
+			ft_lstlast_bonus.c \
+			ft_putchar_bonus.c \
+			ft_putstr_bonus.c \
+			ft_putendl_bonus.c \
+			ft_putnbr_bonus.c \
+			ft_strcpy_bonus.c \
+			ft_strncpy_bonus.c \
+			ft_strcmp_bonus.c \
+			ft_swap_bonus.c \
+			ft_memalloc_bonus.c \
+			ft_memdel_bonus.c \
+			ft_strndup_bonus.c \
+			ft_strcat_bonus.c \
+			ft_strncat_bonus.c \
+			ft_strstr_bonus.c \
+			ft_isupper_bonus.c \
+			ft_islower_bonus.c \
+			ft_strnew_bonus.c \
+			ft_strdel_bonus.c \
+			ft_strclr_bonus.c \
+			ft_striter_bonus.c \
+			ft_striteri_bonus.c \
+			ft_strmap_bonus.c \
+			ft_strequ_bonus.c \
+			ft_strnequ_bonus.c \
 
 SRCS	=	$(addprefix ${ROOT}, ${FILES})
 
+BONUSSRC=	$(addprefix ${ROOT}, ${BONUS})
+
 OBJS	=	${SRCS:.c=.o}
+
+BONUSOBJ=	${BONUSSRC:.c=.o} \
+			${SRCS:.c=.o}
 
 NAME	=	libft.a
 
@@ -104,18 +100,38 @@ RM		=	rm -f
 
 CFLAGS	=	-Wall -Wextra -Werror -I ${HROOT}
 
-.c.o:
+BONUSF	=	-I ${BONUSH}
+
+
+T		=	$(words ${BONUSOBJ})
+N		=	0
+C		=	$(words $N)${eval N := X $N}
+_CYAN	=	\033[36m
+_GREEN	=	\033[32m
+ECHO	=	"[`expr $C  '*' 100 / $T`%]"
+
+.PHONY: bonus fclean clean re
+
+
+%.o :	%.c
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
-	ar rcs ${NAME} ${OBJS}
+	@ar rcs ${NAME} ${OBJS}
 
 all:	${NAME}
 
+bench:
+	gcc ${CFLAGS} -shared -o libft.so -fPIC ${ROOT}ft_*.c
+
+bonus:	${BONUSOBJ}
+	ar rcs ${NAME} ${BONUSOBJ}
+
 clean:
-		${RM} ${OBJS}
+		${RM} ${BONUSOBJ}
 
 fclean:	clean
 		${RM} ${NAME}
+		${RM} libft.so
 
 re:		fclean all
