@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 15:00:15 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/10 17:05:59 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/16 18:22:44 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (s1 && !s2)
 		return (ft_strdup(s1));
-	else if (!s1 && s2)
+	if (!s1 && s2)
 		return (ft_strdup(s2));
 	len = ft_strlen(s1) + ft_strlen(s2);
 	if (!(new = malloc((len + 1) * sizeof(char))))

@@ -6,7 +6,7 @@
 #    By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 14:55:10 by cjaimes           #+#    #+#              #
-#    Updated: 2019/10/10 17:58:19 by cjaimes          ###   ########.fr        #
+#    Updated: 2019/10/14 12:02:38 by cjaimes          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,14 +110,14 @@ _CYAN	=	\033[36m
 _GREEN	=	\033[32m
 ECHO	=	"[`expr $C  '*' 100 / $T`%]"
 
-.PHONY: bonus fclean clean re
+.PHONY:	fclean clean re
 
 
 %.o :	%.c
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
-	@ar rcs ${NAME} ${OBJS}
+	ar rcs ${NAME} ${OBJS}
 
 all:	${NAME}
 
@@ -125,6 +125,7 @@ bench:
 	gcc ${CFLAGS} -shared -o libft.so -fPIC ${ROOT}ft_*.c
 
 bonus:	${BONUSOBJ}
+	@touch bonus
 	ar rcs ${NAME} ${BONUSOBJ}
 
 clean:
@@ -133,5 +134,7 @@ clean:
 fclean:	clean
 		${RM} ${NAME}
 		${RM} libft.so
+		@${RM} bonus
+		
 
 re:		fclean all

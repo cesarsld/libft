@@ -6,12 +6,11 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/09 16:22:46 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/09 14:27:46 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/11 13:10:42 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

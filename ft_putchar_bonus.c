@@ -6,15 +6,13 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 13:45:18 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/10 17:06:32 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/15 18:00:13 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
-void	ft_putchar(unsigned int c)
+void	ft_putchar(char c)
 {
-	if (c <= 127)
-		write(1, &c, 1);
+	write(1, &c, 1);
 }

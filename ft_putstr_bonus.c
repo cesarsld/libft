@@ -6,12 +6,11 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 18:06:34 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/10 17:07:58 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/11 13:09:18 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
 void	ft_putstr(char const *str)
 {

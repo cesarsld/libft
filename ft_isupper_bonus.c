@@ -6,12 +6,11 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/24 13:49:22 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/09 14:26:25 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/11 13:09:34 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
 int	ft_isupper(int c)
 {

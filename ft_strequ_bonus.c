@@ -6,12 +6,11 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/26 12:36:42 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/09 14:28:00 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/11 13:10:53 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
 int	ft_strequ(char const *s1, char const *s2)
 {

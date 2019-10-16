@@ -6,12 +6,11 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 16:19:50 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/09 14:28:37 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/11 13:11:29 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
 void	ft_swap(int *a, int *b)
 {

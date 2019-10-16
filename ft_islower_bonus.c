@@ -6,12 +6,11 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/24 13:47:50 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/09 14:26:23 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/11 13:09:29 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
 int	ft_islower(int c)
 {

@@ -6,12 +6,11 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 11:06:25 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/09 14:28:22 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/11 13:11:15 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
 char	*ft_strndup(const char *s1, size_t len)
 {

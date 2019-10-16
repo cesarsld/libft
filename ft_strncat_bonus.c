@@ -6,12 +6,11 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 10:11:11 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/09 14:28:13 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/11 13:11:08 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {

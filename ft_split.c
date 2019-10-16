@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 13:05:03 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/10 17:14:16 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/16 11:48:58 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	**ft_split(char const *s, char c)
 	count = 0;
 	while (*cpy)
 	{
-		while (*cpy == c)
+		while (*cpy == c && *cpy)
 			cpy++;
 		if (*cpy)
 		{

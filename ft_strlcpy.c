@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:21:00 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/09 15:21:57 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/15 16:01:49 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 size_t	ft_strlcpy(char *dst, char const *src, size_t dstsize)
 {
 	unsigned int	i;
+	unsigned int	n;
 	char			*temp;
 
 	temp = dst;
 	i = 0;
+	n = ft_strlen(src);
 	if (!dst || !src)
 		return (0);
 	while (i + 1 < dstsize && *src)
@@ -26,9 +28,7 @@ size_t	ft_strlcpy(char *dst, char const *src, size_t dstsize)
 		*dst++ = *src++;
 		i++;
 	}
-	*dst = '\0';
-	while (*src++)
-		i++;
-	dst = temp;
-	return (i);
+	if (dstsize)
+		*dst = '\0';
+	return (n);
 }
