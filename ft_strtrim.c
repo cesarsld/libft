@@ -6,18 +6,13 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/26 13:35:39 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/10 16:57:56 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/17 11:07:24 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_white_space(char c)
-{
-	return (c == ' ' || c == '\n' || c == '\t');
-}
-
-int		is_set(char c, char const *set)
+static int	is_set(char c, char const *set)
 {
 	while (*set)
 		if (c == *set++)
@@ -25,7 +20,7 @@ int		is_set(char c, char const *set)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s, char const *set)
+char		*ft_strtrim(char const *s, char const *set)
 {
 	size_t	len;
 	char	*new;

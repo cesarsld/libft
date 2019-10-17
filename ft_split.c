@@ -6,13 +6,13 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 13:05:03 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/16 11:48:58 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/17 11:08:27 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy1(char *dst, const char *src, size_t n)
+static char	*ft_strncpy1(char *dst, const char *src, size_t n)
 {
 	int i;
 
@@ -29,7 +29,7 @@ char	*ft_strncpy1(char *dst, const char *src, size_t n)
 	return (dst - i);
 }
 
-char	**create_tab(int count, const char *str, char c)
+static char	**create_tab(int count, const char *str, char c)
 {
 	char		**tab;
 	int			i;
@@ -56,7 +56,7 @@ char	**create_tab(int count, const char *str, char c)
 	return (tab - count);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	int			count;
 	const char	*cpy;

@@ -6,13 +6,13 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/26 17:00:54 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/09 15:20:35 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/10/17 11:05:32 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*string_zero(void)
+static char	*string_zero(void)
 {
 	char *res;
 
@@ -23,7 +23,7 @@ char	*string_zero(void)
 	return (res);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	tab[11];
 	char	*res;
