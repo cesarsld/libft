@@ -6,13 +6,13 @@
 #    By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 14:55:10 by cjaimes           #+#    #+#              #
-#    Updated: 2019/10/14 12:02:38 by cjaimes          ###   ########.fr        #
+#    Updated: 2019/10/23 13:45:26 by cjaimes          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-ROOT	=	./
+ROOT	=	./srcs/
 
-HROOT	=	./
+HROOT	=	includes/
 
 FILES	=	ft_memset.c \
 			ft_bzero.c \
@@ -48,8 +48,7 @@ FILES	=	ft_memset.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
-
-BONUS	=	ft_lstnew_bonus.c \
+			ft_lstnew_bonus.c \
 			ft_lstdelone_bonus.c \
 			ft_lstclear_bonus.c \
 			ft_lstadd_front_bonus.c \
@@ -85,12 +84,7 @@ BONUS	=	ft_lstnew_bonus.c \
 
 SRCS	=	$(addprefix ${ROOT}, ${FILES})
 
-BONUSSRC=	$(addprefix ${ROOT}, ${BONUS})
-
 OBJS	=	${SRCS:.c=.o}
-
-BONUSOBJ=	${BONUSSRC:.c=.o} \
-			${SRCS:.c=.o}
 
 NAME	=	libft.a
 
@@ -100,10 +94,7 @@ RM		=	rm -f
 
 CFLAGS	=	-Wall -Wextra -Werror -I ${HROOT}
 
-BONUSF	=	-I ${BONUSH}
-
-
-T		=	$(words ${BONUSOBJ})
+T		=	$(words ${OBJS})
 N		=	0
 C		=	$(words $N)${eval N := X $N}
 _CYAN	=	\033[36m
@@ -114,27 +105,24 @@ ECHO	=	"[`expr $C  '*' 100 / $T`%]"
 
 
 %.o :	%.c
-		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+		@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+		@printf "%-60b\r" "${_CYAN}${ECHO}${_CYAN} Compiling $@"
 
 ${NAME}:	${OBJS}
-	ar rcs ${NAME} ${OBJS}
+	@ar rcs ${NAME} ${OBJS}
+	@printf "\r%b" "${_GREEN}Library ${NAME} compiled successfully! :D\n"
+	
 
 all:	${NAME}
 
 bench:
 	gcc ${CFLAGS} -shared -o libft.so -fPIC ${ROOT}ft_*.c
 
-bonus:	${BONUSOBJ}
-	@touch bonus
-	ar rcs ${NAME} ${BONUSOBJ}
-
 clean:
-		${RM} ${BONUSOBJ}
+		@${RM} ${OBJS}
 
 fclean:	clean
-		${RM} ${NAME}
-		${RM} libft.so
-		@${RM} bonus
-		
+		@${RM} ${NAME}
+		@${RM} libft.so
 
 re:		fclean all
