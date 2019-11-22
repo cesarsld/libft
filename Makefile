@@ -6,7 +6,7 @@
 #    By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 14:55:10 by cjaimes           #+#    #+#              #
-#    Updated: 2019/10/23 13:45:26 by cjaimes          ###   ########.fr        #
+#    Updated: 2019/11/22 12:39:49 by cjaimes          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,8 @@ FILES	=	ft_memset.c \
 			ft_strmap_bonus.c \
 			ft_strequ_bonus.c \
 			ft_strnequ_bonus.c \
+			get_next_line.c \
+			get_next_line_utils.c
 
 SRCS	=	$(addprefix ${ROOT}, ${FILES})
 

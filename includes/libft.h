@@ -6,7 +6,7 @@
 /*   By: cjaimes <cjaimes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 09:47:20 by cjaimes           #+#    #+#             */
-/*   Updated: 2019/10/17 16:14:12 by cjaimes          ###   ########.fr       */
+/*   Updated: 2019/11/22 12:39:29 by cjaimes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <fcntl.h>
+# define BUFFER_SIZE 64
 
 typedef struct		s_list
 {
@@ -96,4 +98,8 @@ int					ft_isupper(int c);
 void				ft_swap(int *a, int *b);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
+
+int					get_next_line(int fd, char **line);
+int					shift_buf(char *buf, int amount, ssize_t size, int check);
+int					check_line(char **line, char *buf, int size);
 #endif
